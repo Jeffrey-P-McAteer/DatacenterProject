@@ -4,6 +4,9 @@
 
 #include "MapReduceJob.h"
 
+class MapReduceJob;
+class SubJob;
+
 class JobManager {
     private:
         std::list<MapReduceJob*> completedJobs;

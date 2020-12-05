@@ -3,11 +3,14 @@
 #include "DatacenterController.h"
 #include "AccessPoint.h"
 
+class RegionController;
+
 class GroupController {
     private:
         RegionController* parent;
 
-        AccessPoint accessPoints[4];
+        AccessPoint* accessPoints[4];
+        
     public:
         GroupController();
         GroupController(RegionController* rgController);

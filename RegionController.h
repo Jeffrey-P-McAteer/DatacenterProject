@@ -3,11 +3,15 @@
 #include "DatacenterController.h"
 #include "GroupController.h"
 
+class DatacenterController;
+class GroupController;
+
 class RegionController {
     private:
         DatacenterController* parent;
 
-        GroupController groups[4];
+        GroupController* groups[4];
+        
     public:
         RegionController();
         RegionController(DatacenterController* dcController);

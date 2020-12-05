@@ -5,6 +5,9 @@
 #include "DatacenterController.h"
 #include "Vehicle.h"
 
+class GroupController;
+class Vehicle;
+
 class AccessPoint {
     private:
         GroupController* parent;

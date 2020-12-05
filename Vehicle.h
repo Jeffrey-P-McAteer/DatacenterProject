@@ -8,6 +8,8 @@
 
 class MapReduceJob;
 class VirtualMachine;
+class DatacenterController;
+class AccessPoint;
 
 class Vehicle {
     private:

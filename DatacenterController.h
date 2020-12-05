@@ -5,10 +5,14 @@
 #include "JobManager.h"
 #include "RegionController.h"
 
+class RegionController;
+class JobManager;
+class SubJob;
+
 class DatacenterController {
     private:
-        JobManager jobManager;
-        RegionController regions[4];
+        JobManager* jobManager;
+        RegionController* regions[4];
         std::list<Vehicle*> vehicles;
         int shiftToReplace;
         float percentBusyMax;

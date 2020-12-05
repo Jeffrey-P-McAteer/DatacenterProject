@@ -1,6 +1,10 @@
 #pragma once
 
 #include "Vehicle.h"
+#include "MapReduceJob.h"
+
+class Vehicle;
+class MapReduceJob;
 
 class SubJob {
     private:
