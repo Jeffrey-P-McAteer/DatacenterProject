@@ -22,7 +22,6 @@ datacenter: main.cpp MapReduceJob.h MapReduceJob.cpp VirtualMachine.h VirtualMac
 				-Wsign-conversion \
 				-Wsign-promo \
 				-Wstrict-null-sentinel \
-				-Wstrict-overflow=5 \
 				-Wswitch-default \
 				-Wundef \
 				-Werror \

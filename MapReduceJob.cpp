@@ -24,7 +24,7 @@ MapReduceJob::MapReduceJob(int id, int numSubJobs) {
     this->numSubJobs = numSubJobs;
 
     for (int i = 0; i < numSubJobs; i++) {
-        this->reduceJobs.push_back(new SubJob(this, ((int)this->estimatedCompletionTime / 2) + 1));
+        this->reduceJobs.push_back(new SubJob(this, (this->estimatedCompletionTime / 2) + 1));
         this->uploadedResults.push_back(0);
     }
 }
@@ -55,7 +55,7 @@ void MapReduceJob::receiveUpload(SubJob* job) {
         if ((*sitr) == job) {
             (*uitr) += 54;
 
-            if ((*uitr) >= (int)((this->intermediateDataSize / this->numSubJobs) + 1)) {
+            if ((*uitr) >= ((this->intermediateDataSize / this->numSubJobs) + 1)) {
                 (*sitr)->setUploaded();
             }
         }

@@ -122,7 +122,7 @@ bool AccessPoint::isBusy(float percentage) {
         }
     }
 
-    if ((float)(busy / 40) > percentage) {
+    if (( static_cast<float>(busy) / 40.0) > percentage) {
         return true;
     } else {
         return false;
