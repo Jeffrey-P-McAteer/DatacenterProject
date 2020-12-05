@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
     //const long endTime = 1209600; // Two weeks end time.
     long time = 0;
 
-    DatacenterController dcController = DatacenterController(std::stof(argv[2]), std::atoi(argv[3]));
+    DatacenterController* dcController = new DatacenterController(std::stof(argv[2]), std::atoi(argv[3]));
 
     while (time < endTime) {
         time += 1;
@@ -26,11 +26,11 @@ int main(int argc, char** argv) {
             dcController.migrateLeaving(time);
         }*/
 
-        dcController.work();
+        dcController->work();
 
         // Check if it's time for a shift change...
         if (time % 3600 == 0) {
-            dcController.shiftChange(time);
+            dcController->shiftChange(time);
         }
     }
 
