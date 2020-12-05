@@ -20,8 +20,11 @@ DatacenterController::DatacenterController() {
 
 // Alternate Constructor that take percentage of busy cars
 DatacenterController::DatacenterController(float percentBusy, int numReducers) {
+    for (int i = 0; i < 4; i++) {
+        this->regions[i] = new RegionController(this);
+    }
     for (int i = 0; i < 7680; i++) {
-        vehicles.push_back(new Vehicle(i));
+        this->vehicles.push_back(new Vehicle(i));
     }
 
     this->initializeParkingLot();
