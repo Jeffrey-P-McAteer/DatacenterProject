@@ -72,3 +72,8 @@ void MapReduceJob::removeRepo(Vehicle* repo) {
 void MapReduceJob::addRepo(Vehicle* repo) {
     this->repositories.push_back(repo);
 }
+
+
+int MapReduceJob::getIntermedSize() {
+    return this->intermediateDataSize;    
+}

@@ -95,3 +95,8 @@ void SubJob::setIntermedOneSaved(bool saved) {
 void SubJob::setIntermedTwoSaved(bool saved) {
     this->uploadTwo = saved;
 }
+
+bool SubJob::isMapJob() {
+    return this->isMap;
+}
+

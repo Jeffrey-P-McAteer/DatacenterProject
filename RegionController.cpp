@@ -81,3 +81,7 @@ Vehicle* RegionController::getRandomVehicle() {
 
     return this->groups[random(generator)]->getRandomVehicle();
 }
+
+DatacenterController* RegionController::getParent() {
+    return this->parent;
+}

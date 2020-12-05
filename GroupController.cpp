@@ -80,3 +80,7 @@ Vehicle* GroupController::getRandomVehicle() {
 
     return this->accessPoints[random(generator)]->getRandomVehicle();
 }
+
+RegionController* GroupController::getParent() {
+    return this->parent;
+}
