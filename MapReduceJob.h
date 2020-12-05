@@ -6,6 +6,7 @@
 #include "Vehicle.h"
 #include "SubJob.h"
 
+class SubJob;
 class Vehicle;
 
 class MapReduceJob {
