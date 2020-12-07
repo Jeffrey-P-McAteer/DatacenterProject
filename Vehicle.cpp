@@ -41,6 +41,9 @@ bool Vehicle::isMigrating() {
 
 void Vehicle::setJob(SubJob* job) {
     std::cout << "Setting job...\n";
+    if (this->vm == nullptr) {
+        std::cout << "this->vm == nullptr!" << std::endl;
+    }
     this->vm->setJob(job);
     std::cout << "Job set...\n";
     this->isBusy = true;
